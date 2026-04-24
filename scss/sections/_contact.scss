@@ -1,0 +1,47 @@
+.contact {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  position: relative;
+  overflow: hidden;
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__dog {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+
+    &--left {
+      left: -50px;
+      width: 488px;
+      height: auto;
+    }
+
+    &--right {
+      right: -50px;
+      width: 322px;
+      height: auto;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    max-width: 606px;
+    width: 100%;
+    text-align: center;
+  }
+  &__title {
+    font-size: 56px;
+    margin-bottom: 16px;
+  }
+  &__subtitle {
+    font-size: 18px;
+    margin-bottom: 42px;
+    color: var(--color-secondary-gray);
+  }
+}

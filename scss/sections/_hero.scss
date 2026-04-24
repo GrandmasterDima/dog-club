@@ -1,0 +1,87 @@
+.hero {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  position: relative;
+  overflow: hidden;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: -46px;
+    right: 142px;
+    fill: var(--color-brand-light);
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 72px;
+    max-width: 636px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__desc {
+    margin-bottom: 24px;
+    font-size: 22px;
+    max-width: 494px;
+    line-height: 1.55;
+  }
+
+  &__visual {
+    position: relative;
+    flex-shrink: 0;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+  }
+  &__avatar {
+    position: absolute;
+    z-index: 3;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+
+    &--1 {
+      top: 56%;
+      left: -20%;
+    }
+
+    &--2 {
+      top: 2%;
+      right: 74%;
+    }
+
+    &--3 {
+      bottom: 78%;
+      left: 92%;
+    }
+  }
+  &__paw {
+    position: absolute;
+    z-index: 0;
+
+    &--orange-small {
+      top: 80%;
+      left: 45%;
+      fill: var(--color-brand-normal);
+    }
+    // потрібно  додати інші лапки
+  }
+}

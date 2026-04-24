@@ -1,6 +1,22 @@
 @import './utils/fonts';
 @import './utils/variables';
+@import './utils/utils';
 
-@import './base';
+@import './components/buttons';
+@import './components/nav';
+@import './components/play-btn';
+@import './components/service-card';
+@import './components/review-card';
+@import './components/form';
 
 @import './layouts/container';
+@import './layouts/header';
+@import './layouts/footer';
+
+@import './sections/hero';
+@import './sections/about';
+@import './sections/services';
+@import './sections/contact';
+@import './sections/testimonials';
+
+@import './base';

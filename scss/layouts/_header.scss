@@ -1,0 +1,32 @@
+.header {
+  padding-top: 32px;
+  padding-bottom: 16px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+}
+.cart-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: var(--color-brand-normal);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &__icon {
+    fill: var(--color-brand-normal);
+  }
+}

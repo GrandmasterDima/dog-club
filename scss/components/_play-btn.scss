@@ -1,0 +1,31 @@
+.play-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 162px;
+  height: 124px;
+  background-image: url(/images/play-blob.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  color: var(--color-primary-light);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+
+  &__icon {
+    margin-bottom: 8px;
+    fill: none;
+    stroke: currentColor;
+  }
+  &__text {
+    font-size: 16px;
+  }
+}

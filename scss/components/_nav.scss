@@ -1,0 +1,21 @@
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  &__link {
+    color: var(--color-primary-dark);
+    transition: color 0.2s ease;
+
+    &:hover,
+    &:focus {
+      color: var(--color-brand-normal);
+    }
+
+    &--active {
+      color: var(--color-brand-normal);
+      font-weight: 700;
+    }
+  }
+}

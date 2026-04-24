@@ -1,0 +1,30 @@
+.service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 72px;
+  border-radius: 16px;
+  border: 1px solid var(--color-secondary-white);
+  background: linear-gradient(180deg, #ffffff 0%, #fffbf4 100%);
+  box-shadow: 0 4px 4px 0 rgba(24, 24, 23, 0.05);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+
+  &:hover,
+  &:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px 0 rgba(24, 24, 23, 0.1);
+  }
+
+  &__icon {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--color-brand-normal);
+  }
+}

@@ -26,7 +26,9 @@
               <a href="#services" class="nav__link">Services category</a>
             </li>
             <li class="nav__item">
-              <a href="#customers" class="nav__link">Happy customer</a>
+              <a href="#customers" class="nav__link nav__link--active"
+                >Happy customer</a
+              >
             </li>
             <li class="nav__item">
               <a href="#contact" class="nav__link">Contact</a>
@@ -36,7 +38,7 @@
 
         <div class="header__actions">
           <button class="cart-btn" type="button" aria-label="Cart">
-            <svg class="cart-btn__icon" width="24" height="24">
+            <svg class="cart-btn__icon" width="40" height="40">
               <use href="./images/sprite.svg#icon-cart"></use>
             </svg>
           </button>
@@ -54,6 +56,9 @@
       <section class="hero">
         <div class="container hero__container">
           <div class="hero__content">
+            <svg class="hero__arrow" width="64" height="48">
+              <use href="./images/sprite.svg#icon-arrow-curved"></use>
+            </svg>
             <h1 class="hero__title">Taking care for your Smart Dog!</h1>
             <p class="hero__desc">
               Human-canine bonding is the relationship between dogs and humans
@@ -61,17 +66,44 @@
             <button class="button button--primary hero__btn" type="button">
               Explore more
             </button>
+            <svg
+              class="hero__paw hero__paw--orange-small"
+              width="42"
+              height="42"
+            >
+              <use href="./images/sprite.svg#icon-paw-2"></use>
+            </svg>
           </div>
+
           <div class="hero__visual">
+            <img
+              src="./images/dog-avatar-1.jpg"
+              alt="Dog face"
+              class="hero__avatar hero__avatar--1"
+            />
+            <img
+              src="./images/dog-avatar-2.jpg"
+              alt="Dog face"
+              class="hero__avatar hero__avatar--2"
+            />
+            <img
+              src="./images/dog-avatar-3.jpg"
+              alt="Dog face"
+              class="hero__avatar hero__avatar--3"
+            />
+
             <picture>
               <source
-                srcset="./images/hero-dog.webp 1x, ./images/hero-dog@2x.webp 2x"
+                srcset="
+                  ./images/hero-image-full.webp   1x,
+                  ./images/hero-image-full@2.webp 2x
+                "
                 type="image/webp"
               />
               <img
-                src="./images/hero-dog.png"
-                srcset="./images/hero-dog@2x.png 2x"
-                alt="Happy black dog"
+                src="/images/hero-image-full.png"
+                srcset="./images/hero-image-full@2.png 2x"
+                alt="Happy black dog on orange background with paws"
                 class="hero__img"
               />
             </picture>
@@ -97,6 +129,7 @@
                 class="about__img"
               />
             </picture>
+
             <button
               class="play-btn about__play-btn"
               type="button"
@@ -107,6 +140,15 @@
               </svg>
               <span class="play-btn__text">Learn more</span>
             </button>
+            <svg class="about__paw about__paw--1" width="42" height="42">
+              <use href="/images/sprite.svg#icon-paw-1"></use>
+            </svg>
+            <svg class="about__paw about__paw--2" width="42" height="42">
+              <use href="./images/sprite.svg#icon-paw-2"></use>
+            </svg>
+            <svg class="about__paw about__paw--3" width="42" height="42">
+              <use href="./images/sprite.svg#icon-paw-3"></use>
+            </svg>
           </div>
           <div class="about__content">
             <h2 class="section-title about__title">Less talk and more walk</h2>
@@ -129,23 +171,23 @@
           <ul class="services__list">
             <li class="services__item">
               <article class="service-card">
-                <svg class="service-card__icon" width="64" height="64">
+                <svg class="service-card__icon" width="96" height="96">
                   <use href="./images/sprite.svg#icon-grooming"></use>
                 </svg>
                 <h3 class="service-card__title">Grooming</h3>
               </article>
             </li>
             <li class="services__item">
-              <article class="service-card">
-                <svg class="service-card__icon" width="64" height="64">
+              <a href="./nutrition.html" class="service-card">
+                <svg class="service-card__icon" width="96" height="96">
                   <use href="./images/sprite.svg#icon-nutrition"></use>
                 </svg>
                 <h3 class="service-card__title">Nutrition</h3>
-              </article>
+              </a>
             </li>
             <li class="services__item">
               <article class="service-card">
-                <svg class="service-card__icon" width="64" height="64">
+                <svg class="service-card__icon" width="96" height="96">
                   <use href="./images/sprite.svg#icon-training"></use>
                 </svg>
                 <h3 class="service-card__title">Training</h3>
@@ -153,28 +195,40 @@
             </li>
             <li class="services__item">
               <article class="service-card">
-                <svg class="service-card__icon" width="64" height="64">
+                <svg class="service-card__icon" width="96" height="96">
                   <use href="./images/sprite.svg#icon-bathing"></use>
                 </svg>
                 <h3 class="service-card__title">Bathing</h3>
               </article>
             </li>
           </ul>
-          <a href="./nutrition.html" class="services__link"
-            >more services &rarr;</a
-          >
+          <a href="./nutrition.html" class="services__link">
+            more services
+            <svg class="services__link-icon" width="24" height="12">
+              <use href="./images/sprite.svg#icon-arrow-long"></use>
+            </svg>
+          </a>
         </div>
       </section>
 
       <section class="testimonials" id="customers">
         <div class="container testimonials__container">
           <h2 class="section-title testimonials__title">Happy customer</h2>
+
           <div class="slider testimonials__slider">
             <button
               class="slider__btn slider__btn--prev"
               type="button"
               aria-label="Previous slide"
-            ></button>
+            >
+              <svg
+                class="slider__icon slider__icon--prev"
+                width="16"
+                height="16"
+              >
+                <use href="./images/sprite.svg#icon-Arrow"></use>
+              </svg>
+            </button>
 
             <ul class="slider__track">
               <li class="slider__item">
@@ -192,16 +246,35 @@
                     <p class="review-card__text">
                       Love the overall workout experience!
                     </p>
+
                     <div
                       class="review-card__rating"
                       role="img"
                       aria-label="Rating 5 out of 5"
                     >
-                      5/5
+                      <div class="bones">
+                        <svg class="bone bone--filled" width="32" height="14">
+                          <use href="./images/sprite.svg#icon-bone"></use>
+                        </svg>
+                        <svg class="bone bone--filled" width="32" height="14">
+                          <use href="./images/sprite.svg#icon-bone"></use>
+                        </svg>
+                        <svg class="bone bone--filled" width="32" height="14">
+                          <use href="./images/sprite.svg#icon-bone"></use>
+                        </svg>
+                        <svg class="bone bone--filled" width="32" height="14">
+                          <use href="./images/sprite.svg#icon-bone"></use>
+                        </svg>
+                        <svg class="bone bone--filled" width="32" height="14">
+                          <use href="./images/sprite.svg#icon-bone"></use>
+                        </svg>
+                      </div>
+                      <span class="rating-text">5/5</span>
                     </div>
                   </div>
                 </article>
               </li>
+
               <li class="slider__item">
                 <article class="review-card">
                   <picture>
@@ -217,16 +290,35 @@
                     <p class="review-card__text">
                       Amazing Products & Delivery on time.
                     </p>
+
                     <div
                       class="review-card__rating"
                       role="img"
                       aria-label="Rating 4 out of 5"
                     >
-                      4/5
+                      <div class="bones">
+                        <svg class="bone bone--filled" width="32" height="14">
+                          <use href="./images/sprite.svg#icon-bone"></use>
+                        </svg>
+                        <svg class="bone bone--filled" width="32" height="14">
+                          <use href="./images/sprite.svg#icon-bone"></use>
+                        </svg>
+                        <svg class="bone bone--filled" width="32" height="14">
+                          <use href="./images/sprite.svg#icon-bone"></use>
+                        </svg>
+                        <svg class="bone bone--filled" width="32" height="14">
+                          <use href="./images/sprite.svg#icon-bone"></use>
+                        </svg>
+                        <svg class="bone bone--empty" width="32" height="14">
+                          <use href="./images/sprite.svg#icon-bone"></use>
+                        </svg>
+                      </div>
+                      <span class="rating-text">4/5</span>
                     </div>
                   </div>
                 </article>
               </li>
+
               <li class="slider__item">
                 <article class="review-card">
                   <picture>
@@ -240,12 +332,30 @@
                   <div class="review-card__content">
                     <h3 class="review-card__name">Sindy & Kitch</h3>
                     <p class="review-card__text">Great job with the trainer!</p>
+
                     <div
                       class="review-card__rating"
                       role="img"
                       aria-label="Rating 5 out of 5"
                     >
-                      5/5
+                      <div class="bones">
+                        <svg class="bone bone--filled" width="32" height="14">
+                          <use href="./images/sprite.svg#icon-bone"></use>
+                        </svg>
+                        <svg class="bone bone--filled" width="32" height="14">
+                          <use href="./images/sprite.svg#icon-bone"></use>
+                        </svg>
+                        <svg class="bone bone--filled" width="32" height="14">
+                          <use href="./images/sprite.svg#icon-bone"></use>
+                        </svg>
+                        <svg class="bone bone--filled" width="32" height="14">
+                          <use href="./images/sprite.svg#icon-bone"></use>
+                        </svg>
+                        <svg class="bone bone--filled" width="32" height="14">
+                          <use href="./images/sprite.svg#icon-bone"></use>
+                        </svg>
+                      </div>
+                      <span class="rating-text">5/5</span>
                     </div>
                   </div>
                 </article>
@@ -256,7 +366,15 @@
               class="slider__btn slider__btn--next"
               type="button"
               aria-label="Next slide"
-            ></button>
+            >
+              <svg
+                class="slider__icon slider__icon--next"
+                width="16"
+                height="16"
+              >
+                <use href="./images/sprite.svg#icon-Arrow"></use>
+              </svg>
+            </button>
 
             <div class="slider__pagination">
               <span class="slider__dot slider__dot--active"></span>
@@ -269,6 +387,36 @@
 
       <section class="contact" id="contact">
         <div class="container contact__container">
+          <picture class="contact__dog contact__dog--left">
+            <source
+              srcset="
+                ./images/contact-dog-left.webp    1x,
+                ./images/contact-dog-left@2x.webp 2x
+              "
+              type="image/webp"
+            />
+            <img
+              src="./images/contact-dog-left.png"
+              srcset="./images/contact-dog-left@2x.png 2x"
+              alt="Dog with leash"
+            />
+          </picture>
+
+          <picture class="contact__dog contact__dog--right">
+            <source
+              srcset="
+                ./images/contact-dog-right.webp    1x,
+                ./images/contact-dog-right@2x.webp 2x
+              "
+              type="image/webp"
+            />
+            <img
+              src="./images/contact-dog-right.png"
+              srcset="./images/contact-dog-right@2x.png 2x"
+              alt="Dog peeking"
+            />
+          </picture>
+
           <div class="contact__content">
             <h2 class="section-title contact__title">
               Our experts will take care of your friend
@@ -288,7 +436,7 @@
                   title="Введіть ім'я та прізвище (два слова)"
                   required
                 />
-                <svg class="form__icon" width="20" height="20">
+                <svg class="form__icon" width="32" height="32">
                   <use href="./images/sprite.svg#icon-user"></use>
                 </svg>
               </label>
@@ -301,7 +449,7 @@
                   placeholder="Pet name"
                   required
                 />
-                <svg class="form__icon" width="20" height="20">
+                <svg class="form__icon" width="32" height="32">
                   <use href="./images/sprite.svg#icon-paw"></use>
                 </svg>
               </label>
@@ -316,7 +464,7 @@
                   title="Формат: +380XXXXXXXXX"
                   required
                 />
-                <svg class="form__icon" width="20" height="20">
+                <svg class="form__icon" width="32" height="32">
                   <use href="./images/sprite.svg#icon-phone"></use>
                 </svg>
               </label>
@@ -329,7 +477,7 @@
                   placeholder="Your email"
                   required
                 />
-                <svg class="form__icon" width="20" height="20">
+                <svg class="form__icon" width="32" height="32">
                   <use href="./images/sprite.svg#icon-email"></use>
                 </svg>
               </label>
@@ -355,6 +503,7 @@
         </div>
       </section>
     </main>
+
     <footer class="footer">
       <div class="container footer__container">
         <div class="footer__brand">
@@ -364,14 +513,18 @@
           <ul class="socials footer__socials">
             <li class="socials__item">
               <a href="#" class="socials__link" aria-label="Instagram">
-                <svg class="socials__icon" width="24" height="24">
+                <svg class="socials__icon" width="30" height="30">
                   <use href="./images/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
               <a href="#" class="socials__link" aria-label="Facebook">
-                <svg class="socials__icon" width="24" height="24">
+                <svg
+                  class="socials__icon socials__icon--facebook"
+                  width="30"
+                  height="30"
+                >
                   <use href="./images/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
@@ -408,7 +561,7 @@
                 placeholder="Your email"
                 required
               />
-              <svg class="form__icon" width="20" height="20">
+              <svg class="form__icon" width="32" height="32">
                 <use href="./images/sprite.svg#icon-email"></use>
               </svg>
             </label>
@@ -440,6 +593,18 @@
             </label>
           </form>
         </div>
+
+        <picture class="footer__dog">
+          <source
+            srcset="./images/footer-dog.webp 1x, ./images/footer-dog@2x.webp 2x"
+            type="image/webp"
+          />
+          <img
+            src="./images/footer-dog.png"
+            srcset="./images/footer-dog@2x.png 2x"
+            alt="Dog peeking out"
+          />
+        </picture>
       </div>
     </footer>
   </body>
