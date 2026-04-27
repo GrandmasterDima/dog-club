@@ -1,0 +1,83 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(24, 24, 23, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+.modal {
+  position: relative;
+  max-width: 880px;
+  width: 100%;
+  max-height: 880px;
+  height: 100%;
+  background-color: var(--color-secondary-light);
+  border-radius: 32px;
+  padding: 120px 136px;
+  background-image: url(../images/modal-paws-only.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  transform: scale(1);
+  transition: transform 0.2s ease;
+
+  .backdrop.is-hidden & {
+    transform: scale(0.8);
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    fill: var(--color-primary-dark);
+    transition: fill 0.2s ease, transform 0.2s ease;
+
+    &:hover,
+    &:focus {
+      fill: var(--color-brand-normal);
+      transform: scale(1.05);
+    }
+  }
+  &__icon-close {
+    fill: transparent;
+    stroke: var(--color-primary-dark);
+    transition: stroke 0.2s ease;
+
+    &:hover,
+    &:focus {
+      stroke: var(--color-brand-normal);
+      transform: scale(1.05);
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 56px;
+    margin-bottom: 16px;
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: var(--color-secondary-gray);
+    margin-bottom: 42px;
+    line-height: 1.3;
+  }
+}

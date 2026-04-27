@@ -16,6 +16,7 @@
     font-size: 18px;
     line-height: 1.3;
     color: var(--color-primary-dark);
+    background-color: transparent;
 
     &::placeholder {
       color: var(--color-brand-normal);
@@ -75,7 +76,7 @@
       position: absolute;
       width: 8px;
       height: 8px;
-      background-image: url('/images/icon-bird.svg');
+      background-image: url('../images/icon-bird.svg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;

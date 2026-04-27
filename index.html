@@ -43,7 +43,7 @@
             </svg>
           </button>
           <button
-            class="button button--primary header__btn"
+            class="button button--primary modal-btn-open header__btn"
             type="button"
             data-modal-open
           >
@@ -614,5 +614,96 @@
         </picture>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <button
+          class="modal__btn-close modal-btn-close"
+          type="button"
+          aria-label="Close modal"
+        >
+          <svg class="modal__icon-close" width="24" height="24">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <h2 class="modal__title">Our experts will take care of your friend</h2>
+        <p class="modal__subtitle">Fill out the form so we can contact you!</p>
+
+        <form class="form" name="modal-consultation-form">
+          <label class="form__label">
+            <input
+              type="text"
+              name="user_name"
+              class="form__input"
+              placeholder="Your name"
+              pattern="^\s*[a-zA-Zа-яА-ЯіІїЇєЄґҐ]+\s+[a-zA-Zа-яА-ЯіІїЇєЄґҐ]+\s*$"
+              title="Введіть ім'я та прізвище (два слова)"
+              required
+            />
+            <svg class="form__icon" width="32" height="32">
+              <use href="./images/sprite.svg#icon-user"></use>
+            </svg>
+          </label>
+
+          <label class="form__label">
+            <input
+              type="text"
+              name="pet_name"
+              class="form__input"
+              placeholder="Pet name"
+              required
+            />
+            <svg class="form__icon" width="32" height="32">
+              <use href="./images/sprite.svg#icon-paw"></use>
+            </svg>
+          </label>
+
+          <label class="form__label">
+            <input
+              type="tel"
+              name="phone"
+              class="form__input"
+              placeholder="Your phone"
+              pattern="^\+380\d{9}$"
+              title="Формат: +380XXXXXXXXX"
+              required
+            />
+            <svg class="form__icon" width="32" height="32">
+              <use href="./images/sprite.svg#icon-phone"></use>
+            </svg>
+          </label>
+
+          <label class="form__label">
+            <input
+              type="email"
+              name="email"
+              class="form__input"
+              placeholder="Your email"
+              required
+            />
+            <svg class="form__icon" width="32" height="32">
+              <use href="./images/sprite.svg#icon-email"></use>
+            </svg>
+          </label>
+
+          <button type="submit" class="button button--primary form__submit">
+            Contact us
+          </button>
+
+          <label class="form__policy">
+            <input
+              type="checkbox"
+              name="policy"
+              class="form__checkbox-input visually-hidden"
+              required
+            />
+            <span class="form__checkbox-custom"></span>
+            <span class="form__policy-text">I agree to the privacy policy</span>
+          </label>
+        </form>
+      </div>
+    </div>
+    <script src="../js/modal.js"></script>
   </body>
 </html>
