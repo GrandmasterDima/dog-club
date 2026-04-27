@@ -1,6 +1,7 @@
 .about {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
 
   &__container {
     display: flex;
@@ -18,11 +19,11 @@
     &::before {
       content: '';
       position: absolute;
-      top: -30%;
-      left: -15%;
-      width: 540px;
-      height: 500px;
-      background-image: url(/images/about-img-backgroung.svg);
+      top: -25%;
+      left: -10%;
+      width: 650px;
+      height: 600px;
+      background-image: url(../images/about-img-background.svg);
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
@@ -33,6 +34,9 @@
   &__img {
     position: relative;
     z-index: 2;
+    width: 516px;
+    height: auto;
+    transform: translate(0px, 40px);
   }
 
   &__paw {
@@ -43,19 +47,19 @@
   }
 
   &__paw--1 {
-    top: -21%;
-    left: 15%;
+    top: -4%;
+    left: 32%;
   }
 
   &__paw--2 {
-    bottom: 20%;
-    right: 30%;
+    bottom: 42%;
+    right: 20%;
     animation-delay: 1s;
   }
 
   &__paw--3 {
-    bottom: 20%;
-    right: 49%;
+    bottom: 26%;
+    right: 84%;
     animation-delay: 2s;
   }
   @keyframes paw-rotate {
@@ -72,8 +76,8 @@
 
   &__play-btn {
     position: absolute;
-    top: -111px;
-    right: 212px;
+    top: -8px;
+    right: 132px;
     z-index: 3;
   }
 

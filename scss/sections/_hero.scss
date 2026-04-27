@@ -2,7 +2,21 @@
   padding-top: 120px;
   padding-bottom: 120px;
   position: relative;
-  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1563px;
+    height: 808px;
+    background-image: url(../images/hero-bg-wave.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 0;
+  }
 
   &__container {
     display: flex;
@@ -77,11 +91,25 @@
     position: absolute;
     z-index: 0;
 
-    &--orange-small {
-      top: 80%;
-      left: 45%;
+    &--1 {
+      bottom: -10%;
+      left: 98%;
       fill: var(--color-brand-normal);
+      transform: rotate(-46.909deg);
     }
-    // потрібно  додати інші лапки
+
+    &--2 {
+      top: 8%;
+      left: 108%;
+      transform: rotate(47.38deg);
+      fill: var(--color-secondary-purple);
+    }
+
+    &--3 {
+      top: 27%;
+      right: -108%;
+      fill: #ff6e9f;
+      transform: rotate(126deg);
+    }
   }
 }

@@ -22,8 +22,7 @@
 
   &__icon {
     margin-bottom: 8px;
-    fill: none;
-    stroke: currentColor;
+    fill: var(--color-primary-light);
   }
   &__text {
     font-size: 16px;

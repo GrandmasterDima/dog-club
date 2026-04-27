@@ -2,10 +2,24 @@
   padding-top: 120px;
   padding-bottom: 120px;
   position: relative;
-  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -82px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/contact-bg-wave.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    z-index: 0;
+  }
 
   &__container {
     position: relative;
+    z-index: 2;
     display: flex;
     justify-content: center;
   }
