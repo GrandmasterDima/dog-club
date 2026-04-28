@@ -3,9 +3,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 162px;
-  height: 124px;
-  background-image: url(/images/play-blob.svg);
+  width: 74px;
+  height: 74px;
+  background-image: url(../images/play-blob.svg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,10 +21,34 @@
   }
 
   &__icon {
-    margin-bottom: 8px;
-    fill: var(--color-primary-light);
+    margin-bottom: 4px;
+    fill: currentColor;
+    width: 24px;
+    height: 24px;
+
+    @media (min-width: $bp-tablet) {
+      width: 32px;
+      height: 32px;
+    }
+
+    @media (min-width: $bp-desktop) {
+      margin-bottom: 8px;
+      width: 48px;
+      height: 48px;
+    }
   }
+
   &__text {
-    font-size: 16px;
+    font-size: 8px;
+    font-weight: 300;
+
+    @media (min-width: $bp-desktop) {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: $bp-desktop) {
+    width: 162px;
+    height: 124px;
   }
 }

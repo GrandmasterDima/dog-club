@@ -1,6 +1,10 @@
 .header {
-  padding-top: 32px;
+  padding-top: 16px;
   padding-bottom: 16px;
+
+  @media screen and (min-width: $bp-desktop) {
+    padding-top: 32px;
+  }
 
   &__container {
     display: flex;
@@ -8,22 +12,69 @@
     justify-content: space-between;
   }
 
+  &__nav {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: block;
+    }
+  }
+
   &__actions {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 16px;
+
+    @media screen and (min-width: $bp-desktop) {
+      gap: 24px;
+    }
+  }
+
+  &__btn {
+    display: none;
+    @media screen and (min-width: $bp-desktop) {
+      display: block;
+    }
   }
 }
 .cart-btn {
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 8px;
-  color: var(--color-brand-normal);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: transform 0.2s ease;
 
   &:hover {
     transform: scale(1.05);
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--color-brand-normal);
+    transition: width 0.2s ease, height 0.2s ease;
+
+    @media (min-width: $bp-desktop) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.burger-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: $bp-desktop) {
+    display: none;
   }
 
   &__icon {
