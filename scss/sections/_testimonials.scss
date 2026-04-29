@@ -1,88 +1,122 @@
 .testimonials {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: $bp-desktop) {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
 
   &__title {
     text-align: center;
-    font-size: 56px;
-    margin-bottom: 48px;
+    font-size: 32px;
+    margin-bottom: 24px;
+
+    @media (min-width: $bp-tablet) {
+      font-size: 48px;
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: $bp-desktop) {
+      font-size: 56px;
+      margin-bottom: 48px;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+
+    @media (min-width: $bp-desktop) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
   }
 
   &__slider {
     position: relative;
-    padding: 0 72px;
-    max-width: 1208px;
-    margin: 0 auto;
+    width: 100%;
+    min-width: 0;
+
+    @media (min-width: $bp-tablet) {
+      max-width: 712px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: $bp-desktop) {
+      max-width: 1096px;
+    }
   }
 }
 
-.slider {
-  &__track {
-    display: flex;
-    gap: 16px;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    justify-content: center;
+.swiper-pagination {
+  position: static !important;
+  margin-top: 16px !important;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+
+  @media (min-width: $bp-desktop) {
+    gap: 24px;
+    margin-top: 32px !important;
+  }
+}
+
+.slider__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-secondary-gray);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: block;
+
+  @media (min-width: $bp-desktop) {
+    width: 11px;
+    height: 11px;
   }
 
-  &__btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  &--active {
+    background-color: var(--color-brand-normal);
+  }
+}
+
+.slider__btn {
+  display: none;
+
+  @media (min-width: $bp-desktop) {
+    display: flex;
+    flex-shrink: 0;
     width: 48px;
     height: 48px;
     border-radius: 50%;
     background-color: var(--color-secondary-gray);
     border: none;
     cursor: pointer;
-    display: flex;
     justify-content: center;
     align-items: center;
     transition: background-color 0.2s ease, transform 0.2s ease;
     padding: 0;
+    z-index: 5;
 
     &:hover,
     &:focus {
       background-color: var(--color-brand-normal);
-      transform: translateY(-50%) scale(1.05);
-    }
-
-    &--prev {
-      left: 0;
-    }
-
-    &--next {
-      right: 0;
+      transform: scale(1.05);
     }
   }
+}
 
-  &__icon {
-    fill: var(--color-primary-light);
-    transition: fill 0.2s ease;
-    &--prev {
-      transform: rotate(180deg);
-    }
-  }
-
-  &__pagination {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-top: 32px;
-  }
-
-  &__dot {
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    background-color: var(--color-secondary-gray);
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-
-    &--active {
-      background-color: var(--color-brand-normal);
-    }
+.slider__icon {
+  fill: var(--color-primary-light);
+  transition: fill 0.2s ease;
+  &--prev {
+    transform: rotate(180deg);
   }
 }

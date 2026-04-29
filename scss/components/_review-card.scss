@@ -6,9 +6,14 @@
   overflow: hidden;
   background-color: var(--color-secondary-gray);
   color: var(--color-primary-light);
-  height: 456px;
+  height: 416px;
   width: 100%;
   max-width: 344px;
+  margin: 0 auto;
+
+  @media (min-width: $bp-tablet) {
+    height: 456px;
+  }
 
   &__img {
     width: 100%;
@@ -23,40 +28,69 @@
     width: 100%;
     background: var(--color-secondary-gray);
     border-radius: 0 0 24px 24px;
-    padding: 16px 42px;
+    padding: 16px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+
+    @media (min-width: $bp-tablet) {
+      padding: 16px 42px;
+    }
   }
 
   &__name {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     margin-bottom: 8px;
+
+    @media (min-width: $bp-tablet) {
+      font-size: 24px;
+    }
   }
 
   &__text {
     font-size: 14px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+
+    @media (min-width: $bp-tablet) {
+      margin-bottom: 24px;
+    }
   }
 
   &__rating {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 40px;
+    justify-content: space-between;
+    width: 100%;
     color: var(--color-brand-light);
+
+    @media (min-width: $bp-tablet) {
+      justify-content: center;
+      gap: 24px;
+    }
   }
 
   .bones {
     display: flex;
-    gap: 8px;
+    gap: 4px;
+
+    @media (min-width: $bp-tablet) {
+      gap: 8px;
+    }
   }
 
   .bone {
+    width: 24px;
+    height: 10px;
     transition: fill 0.2s ease;
+
+    @media (min-width: $bp-tablet) {
+      width: 32px;
+      height: 14px;
+    }
+
     &--filled {
       fill: var(--color-brand-normal);
     }
@@ -65,7 +99,12 @@
       fill: var(--color-secondary-blue);
     }
   }
+
   .rating-text {
-    font-size: 16px;
+    font-size: 14px;
+
+    @media (min-width: $bp-tablet) {
+      font-size: 16px;
+    }
   }
 }

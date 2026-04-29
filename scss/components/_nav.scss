@@ -3,7 +3,17 @@
     display: flex;
     align-items: center;
     gap: 40px;
+
+    &--column {
+      flex-direction: column;
+      gap: 16px;
+
+      @media screen and (min-width: $bp-tablet) {
+        align-items: flex-start;
+      }
+    }
   }
+
   &__link {
     color: var(--color-primary-dark);
     transition: color 0.2s ease;

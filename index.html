@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dog Club</title>
     <link rel="stylesheet" href="./css/main.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
   </head>
   <body class="page">
     <header class="header">
@@ -254,11 +258,11 @@
         </div>
       </section>
 
-      <!-- <section class="testimonials" id="customers">
+      <section class="testimonials" id="customers">
         <div class="container testimonials__container">
           <h2 class="section-title testimonials__title">Happy customer</h2>
 
-          <div class="slider testimonials__slider">
+          <div class="testimonials__wrapper">
             <button
               class="slider__btn slider__btn--prev"
               type="button"
@@ -273,137 +277,239 @@
               </svg>
             </button>
 
-            <ul class="slider__track">
-              <li class="slider__item">
-                <article class="review-card">
-                  <picture>
-                    <source srcset="./images/review-1.webp" type="image/webp" />
-                    <img
-                      src="./images/review-1.jpg"
-                      alt="Christin & Tom"
-                      class="review-card__img"
-                    />
-                  </picture>
-                  <div class="review-card__content">
-                    <h3 class="review-card__name">Christin & Tom</h3>
-                    <p class="review-card__text">
-                      Love the overall workout experience!
-                    </p>
-
-                    <div
-                      class="review-card__rating"
-                      role="img"
-                      aria-label="Rating 5 out of 5"
-                    >
-                      <div class="bones">
-                        <svg class="bone bone--filled" width="32" height="14">
-                          <use href="./images/sprite.svg#icon-bone"></use>
-                        </svg>
-                        <svg class="bone bone--filled" width="32" height="14">
-                          <use href="./images/sprite.svg#icon-bone"></use>
-                        </svg>
-                        <svg class="bone bone--filled" width="32" height="14">
-                          <use href="./images/sprite.svg#icon-bone"></use>
-                        </svg>
-                        <svg class="bone bone--filled" width="32" height="14">
-                          <use href="./images/sprite.svg#icon-bone"></use>
-                        </svg>
-                        <svg class="bone bone--filled" width="32" height="14">
-                          <use href="./images/sprite.svg#icon-bone"></use>
-                        </svg>
+            <div class="swiper testimonials__slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <article class="review-card">
+                    <picture>
+                      <source
+                        srcset="./images/review-1.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="./images/review-1.jpg"
+                        alt="Christin & Tom"
+                        class="review-card__img"
+                      />
+                    </picture>
+                    <div class="review-card__content">
+                      <h3 class="review-card__name">Christin & Tom</h3>
+                      <p class="review-card__text">
+                        Love the overall workout experience!
+                      </p>
+                      <div
+                        class="review-card__rating"
+                        role="img"
+                        aria-label="Rating 5 out of 5"
+                      >
+                        <div class="bones">
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                        </div>
+                        <span class="rating-text">5/5</span>
                       </div>
-                      <span class="rating-text">5/5</span>
                     </div>
-                  </div>
-                </article>
-              </li>
+                  </article>
+                </div>
 
-              <li class="slider__item">
-                <article class="review-card">
-                  <picture>
-                    <source srcset="./images/review-2.webp" type="image/webp" />
-                    <img
-                      src="./images/review-2.jpg"
-                      alt="Anna & Tobby"
-                      class="review-card__img"
-                    />
-                  </picture>
-                  <div class="review-card__content">
-                    <h3 class="review-card__name">Anna & Tobby</h3>
-                    <p class="review-card__text">
-                      Amazing Products & Delivery on time.
-                    </p>
-
-                    <div
-                      class="review-card__rating"
-                      role="img"
-                      aria-label="Rating 4 out of 5"
-                    >
-                      <div class="bones">
-                        <svg class="bone bone--filled" width="32" height="14">
-                          <use href="./images/sprite.svg#icon-bone"></use>
-                        </svg>
-                        <svg class="bone bone--filled" width="32" height="14">
-                          <use href="./images/sprite.svg#icon-bone"></use>
-                        </svg>
-                        <svg class="bone bone--filled" width="32" height="14">
-                          <use href="./images/sprite.svg#icon-bone"></use>
-                        </svg>
-                        <svg class="bone bone--filled" width="32" height="14">
-                          <use href="./images/sprite.svg#icon-bone"></use>
-                        </svg>
-                        <svg class="bone bone--empty" width="32" height="14">
-                          <use href="./images/sprite.svg#icon-bone"></use>
-                        </svg>
+                <div class="swiper-slide">
+                  <article class="review-card">
+                    <picture>
+                      <source
+                        srcset="./images/review-2.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="./images/review-2.jpg"
+                        alt="Anna & Tobby"
+                        class="review-card__img"
+                      />
+                    </picture>
+                    <div class="review-card__content">
+                      <h3 class="review-card__name">Anna & Tobby</h3>
+                      <p class="review-card__text">
+                        Amazing Products & Delivery on time.
+                      </p>
+                      <div
+                        class="review-card__rating"
+                        role="img"
+                        aria-label="Rating 4 out of 5"
+                      >
+                        <div class="bones">
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                          <svg class="bone bone--empty" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                        </div>
+                        <span class="rating-text">4/5</span>
                       </div>
-                      <span class="rating-text">4/5</span>
                     </div>
-                  </div>
-                </article>
-              </li>
+                  </article>
+                </div>
 
-              <li class="slider__item">
-                <article class="review-card">
-                  <picture>
-                    <source srcset="./images/review-3.webp" type="image/webp" />
-                    <img
-                      src="./images/review-3.jpg"
-                      alt="Sindy & Kitch"
-                      class="review-card__img"
-                    />
-                  </picture>
-                  <div class="review-card__content">
-                    <h3 class="review-card__name">Sindy & Kitch</h3>
-                    <p class="review-card__text">Great job with the trainer!</p>
-
-                    <div
-                      class="review-card__rating"
-                      role="img"
-                      aria-label="Rating 5 out of 5"
-                    >
-                      <div class="bones">
-                        <svg class="bone bone--filled" width="32" height="14">
-                          <use href="./images/sprite.svg#icon-bone"></use>
-                        </svg>
-                        <svg class="bone bone--filled" width="32" height="14">
-                          <use href="./images/sprite.svg#icon-bone"></use>
-                        </svg>
-                        <svg class="bone bone--filled" width="32" height="14">
-                          <use href="./images/sprite.svg#icon-bone"></use>
-                        </svg>
-                        <svg class="bone bone--filled" width="32" height="14">
-                          <use href="./images/sprite.svg#icon-bone"></use>
-                        </svg>
-                        <svg class="bone bone--filled" width="32" height="14">
-                          <use href="./images/sprite.svg#icon-bone"></use>
-                        </svg>
+                <div class="swiper-slide">
+                  <article class="review-card">
+                    <picture>
+                      <source
+                        srcset="./images/review-3.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="./images/review-3.jpg"
+                        alt="Sindy & Kitch"
+                        class="review-card__img"
+                      />
+                    </picture>
+                    <div class="review-card__content">
+                      <h3 class="review-card__name">Sindy & Kitch</h3>
+                      <p class="review-card__text">
+                        Great job with the trainer!
+                      </p>
+                      <div
+                        class="review-card__rating"
+                        role="img"
+                        aria-label="Rating 5 out of 5"
+                      >
+                        <div class="bones">
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                        </div>
+                        <span class="rating-text">5/5</span>
                       </div>
-                      <span class="rating-text">5/5</span>
                     </div>
-                  </div>
-                </article>
-              </li>
-            </ul>
+                  </article>
+                </div>
+
+                <div class="swiper-slide">
+                  <article class="review-card">
+                    <picture>
+                      <source
+                        srcset="./images/review-2.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="./images/review-2.jpg"
+                        alt="Anna & Tobby"
+                        class="review-card__img"
+                      />
+                    </picture>
+                    <div class="review-card__content">
+                      <h3 class="review-card__name">Anna & Tobby</h3>
+                      <p class="review-card__text">
+                        Amazing Products & Delivery on time.
+                      </p>
+                      <div
+                        class="review-card__rating"
+                        role="img"
+                        aria-label="Rating 4 out of 5"
+                      >
+                        <div class="bones">
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                          <svg class="bone bone--empty" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                        </div>
+                        <span class="rating-text">4/5</span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="swiper-slide">
+                  <article class="review-card">
+                    <picture>
+                      <source
+                        srcset="./images/review-3.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="./images/review-3.jpg"
+                        alt="Sindy & Kitch"
+                        class="review-card__img"
+                      />
+                    </picture>
+                    <div class="review-card__content">
+                      <h3 class="review-card__name">Sindy & Kitch</h3>
+                      <p class="review-card__text">
+                        Great job with the trainer!
+                      </p>
+                      <div
+                        class="review-card__rating"
+                        role="img"
+                        aria-label="Rating 5 out of 5"
+                      >
+                        <div class="bones">
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                          <svg class="bone bone--filled" width="32" height="14">
+                            <use href="./images/sprite.svg#icon-bone"></use>
+                          </svg>
+                        </div>
+                        <span class="rating-text">5/5</span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
 
             <button
               class="slider__btn slider__btn--next"
@@ -418,48 +524,43 @@
                 <use href="./images/sprite.svg#icon-Arrow"></use>
               </svg>
             </button>
-
-            <div class="slider__pagination">
-              <span class="slider__dot slider__dot--active"></span>
-              <span class="slider__dot"></span>
-              <span class="slider__dot"></span>
-            </div>
           </div>
+
+          <div class="swiper-pagination"></div>
         </div>
-      </section> -->
+      </section>
 
-      <!-- <section class="contact" id="contact">
+      <section class="contact" id="contact">
+        <picture class="contact__dog contact__dog--left">
+          <source
+            srcset="
+              ./images/contact-dog-left.webp    1x,
+              ./images/contact-dog-left@2x.webp 2x
+            "
+            type="image/webp"
+          />
+          <img
+            src="./images/contact-dog-left.png"
+            srcset="./images/contact-dog-left@2x.png 2x"
+            alt="Dog with leash"
+          />
+        </picture>
+
+        <picture class="contact__dog contact__dog--right">
+          <source
+            srcset="
+              ./images/contact-dog-right.webp    1x,
+              ./images/contact-dog-right@2x.webp 2x
+            "
+            type="image/webp"
+          />
+          <img
+            src="./images/contact-dog-right.png"
+            srcset="./images/contact-dog-right@2x.png 2x"
+            alt="Dog peeking"
+          />
+        </picture>
         <div class="container contact__container">
-          <picture class="contact__dog contact__dog--left">
-            <source
-              srcset="
-                ./images/contact-dog-left.webp    1x,
-                ./images/contact-dog-left@2x.webp 2x
-              "
-              type="image/webp"
-            />
-            <img
-              src="./images/contact-dog-left.png"
-              srcset="./images/contact-dog-left@2x.png 2x"
-              alt="Dog with leash"
-            />
-          </picture>
-
-          <picture class="contact__dog contact__dog--right">
-            <source
-              srcset="
-                ./images/contact-dog-right.webp    1x,
-                ./images/contact-dog-right@2x.webp 2x
-              "
-              type="image/webp"
-            />
-            <img
-              src="./images/contact-dog-right.png"
-              srcset="./images/contact-dog-right@2x.png 2x"
-              alt="Dog peeking"
-            />
-          </picture>
-
           <div class="contact__content">
             <h2 class="section-title contact__title">
               Our experts will take care of your friend
@@ -479,7 +580,7 @@
                   title="Введіть ім'я та прізвище (два слова)"
                   required
                 />
-                <svg class="form__icon" width="32" height="32">
+                <svg class="form__icon">
                   <use href="./images/sprite.svg#icon-user"></use>
                 </svg>
               </label>
@@ -492,7 +593,7 @@
                   placeholder="Pet name"
                   required
                 />
-                <svg class="form__icon" width="32" height="32">
+                <svg class="form__icon">
                   <use href="./images/sprite.svg#icon-paw"></use>
                 </svg>
               </label>
@@ -507,7 +608,7 @@
                   title="Формат: +380XXXXXXXXX"
                   required
                 />
-                <svg class="form__icon" width="32" height="32">
+                <svg class="form__icon">
                   <use href="./images/sprite.svg#icon-phone"></use>
                 </svg>
               </label>
@@ -520,7 +621,7 @@
                   placeholder="Your email"
                   required
                 />
-                <svg class="form__icon" width="32" height="32">
+                <svg class="form__icon">
                   <use href="./images/sprite.svg#icon-email"></use>
                 </svg>
               </label>
@@ -544,14 +645,24 @@
             </form>
           </div>
         </div>
-      </section> -->
+      </section>
     </main>
 
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer__container">
         <div class="footer__brand">
           <a href="./index.html" class="logo footer__logo">
-            <img src="./images/logo-desktop.svg" alt="Dog Club" class="logo__icon" />
+            <picture>
+              <source
+                media="(min-width: 1200px)"
+                srcset="./images/logo-desktop.svg"
+              />
+              <img
+                src="./images/logo-mobile.svg"
+                alt="Dog Club"
+                class="logo__icon"
+              />
+            </picture>
           </a>
           <ul class="socials footer__socials">
             <li class="socials__item">
@@ -604,7 +715,7 @@
                 placeholder="Your email"
                 required
               />
-              <svg class="form__icon" width="32" height="32">
+              <svg class="form__icon">
                 <use href="./images/sprite.svg#icon-email"></use>
               </svg>
             </label>
@@ -649,9 +760,9 @@
           />
         </picture>
       </div>
-    </footer> -->
+    </footer>
 
-    <!-- <div class="backdrop is-hidden">
+    <div class="backdrop is-hidden">
       <div class="modal">
         <button
           class="modal__btn-close modal-btn-close"
@@ -739,7 +850,9 @@
           </label>
         </form>
       </div>
-    </div> -->
+    </div>
     <script src="../js/modal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="../js/swiper-slider.js"></script>
   </body>
 </html>
