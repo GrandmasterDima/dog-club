@@ -1,9 +1,8 @@
 .header {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding: 16px 0;
 
   @media screen and (min-width: $bp-desktop) {
-    padding-top: 32px;
+    padding: 32px 0;
   }
 
   &__container {
@@ -12,7 +11,8 @@
     justify-content: space-between;
   }
 
-  &__nav {
+  &__nav,
+  &__btn {
     display: none;
 
     @media screen and (min-width: $bp-desktop) {
@@ -28,56 +28,5 @@
     @media screen and (min-width: $bp-desktop) {
       gap: 24px;
     }
-  }
-
-  &__btn {
-    display: none;
-    @media screen and (min-width: $bp-desktop) {
-      display: block;
-    }
-  }
-}
-.cart-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-
-  &__icon {
-    width: 24px;
-    height: 24px;
-    fill: var(--color-brand-normal);
-    transition: width 0.2s ease, height 0.2s ease;
-
-    @media (min-width: $bp-desktop) {
-      width: 40px;
-      height: 40px;
-    }
-  }
-}
-
-.burger-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @media (min-width: $bp-desktop) {
-    display: none;
-  }
-
-  &__icon {
-    fill: var(--color-brand-normal);
   }
 }
