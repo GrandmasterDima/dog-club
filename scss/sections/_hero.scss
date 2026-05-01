@@ -1,3 +1,44 @@
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatAvatar {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes pulsePaw {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes bounceArrow {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-10px) translateY(10px);
+  }
+}
+
 .hero {
   padding: 60px 0 80px;
   position: relative;
@@ -42,6 +83,8 @@
     text-align: center;
     position: relative;
     z-index: 2;
+    animation: fadeInUp 1s ease-out forwards;
+
     @media (min-width: $bp-desktop) {
       align-items: flex-start;
       text-align: left;
@@ -57,6 +100,7 @@
       top: -46px;
       right: 142px;
       fill: var(--color-brand-light);
+      animation: bounceArrow 2s infinite ease-in-out;
     }
   }
 
@@ -106,6 +150,7 @@
       width: 50%;
       justify-content: flex-end;
       position: relative;
+      animation: fadeInUp 1.2s ease-out forwards;
     }
   }
 
@@ -121,18 +166,22 @@
     width: 24px;
     height: 24px;
     object-fit: cover;
+    animation: floatAvatar 4s infinite ease-in-out;
 
     &--1 {
       top: 42%;
       left: 48%;
+      animation-delay: 0s;
     }
     &--2 {
       top: -12%;
       left: 18%;
+      animation-delay: 1.5s;
     }
     &--3 {
       top: 82%;
       left: 82%;
+      animation-delay: 0.7s;
     }
 
     @media (min-width: $bp-desktop) {
@@ -150,33 +199,38 @@
       }
       &--3 {
         bottom: 20%;
-        left: 92%;
+        left: 98%;
       }
     }
   }
+
   &__paw {
     position: absolute;
     z-index: 0;
     width: 24px;
     height: 24px;
+    animation: pulsePaw 3s infinite ease-in-out;
 
     &--1 {
       bottom: -10%;
       left: 20%;
       fill: var(--color-brand-normal);
       transform: rotate(-20deg);
+      animation-delay: 0.2s;
     }
     &--2 {
       top: 34%;
       right: 4%;
       fill: var(--color-secondary-purple);
       transform: rotate(53deg);
+      animation-delay: 1.2s;
     }
     &--3 {
       bottom: -15%;
       right: 25%;
       fill: #ff6e9f;
       transform: rotate(15deg);
+      animation-delay: 2s;
     }
     @media (min-width: $bp-desktop) {
       width: 60px;

@@ -13,6 +13,10 @@ body {
   overflow-x: hidden;
 }
 
+body.is-scroll-disabled {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,

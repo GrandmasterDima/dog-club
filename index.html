@@ -58,7 +58,11 @@
             </svg>
           </button>
 
-          <button class="burger-btn" type="button" aria-label="Open menu">
+          <button
+            class="burger-btn menu-btn-open"
+            type="button"
+            aria-label="Open menu"
+          >
             <svg class="burger-btn__icon" width="24" height="24">
               <use href="./images/sprite.svg#icon-header-menu"></use>
             </svg>
@@ -74,6 +78,82 @@
         </div>
       </div>
     </header>
+
+    <div class="mobile-menu">
+      <div class="container mobile-menu__container">
+        <div class="mobile-menu__header">
+          <a href="./index.html" class="logo" aria-label="Dog Club Logo">
+            <img
+              src="./images/logo-mobile.svg"
+              alt="Dog Club"
+              class="logo__icon"
+            />
+          </a>
+          <button
+            class="mobile-menu__btn-close menu-btn-close"
+            type="button"
+            aria-label="Close menu"
+          >
+            <svg class="mobile-menu__icon-close" width="24" height="24">
+              <use href="./images/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+
+        <nav class="nav mobile-menu__nav">
+          <ul class="nav__list nav__list--column">
+            <li class="nav__item">
+              <a href="#about" class="nav__link mobile-menu__link">Less talk</a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#services"
+                class="nav__link nav__link--active mobile-menu__link"
+                >Services category</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#customers" class="nav__link mobile-menu__link"
+                >Happy customer</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link mobile-menu__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button
+          class="button button--primary modal-btn-open mobile-menu__btn"
+          type="button"
+          data-modal-open
+        >
+          Contact us
+        </button>
+
+        <ul class="socials mobile-menu__socials">
+          <li class="socials__item">
+            <a href="#" class="socials__link" aria-label="Instagram">
+              <svg class="socials__icon" width="32" height="32">
+                <use href="./images/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a href="#" class="socials__link" aria-label="Facebook">
+              <svg
+                class="socials__icon socials__icon--facebook"
+                width="32"
+                height="32"
+              >
+                <use href="./images/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <main class="main">
       <section class="hero">
         <div class="container hero__container">
@@ -210,7 +290,7 @@
             <use href="./images/sprite.svg#icon-arrow-curved"></use>
           </svg>
 
-          <div class="services__slider-wrapper">
+          <div class="services__wrapper">
             <ul class="services__list">
               <li class="services__item">
                 <article class="service-card">
@@ -220,7 +300,7 @@
                   <h3 class="service-card__title">Grooming</h3>
                 </article>
               </li>
-              <li class="services__item services__item--active">
+              <li class="services__item">
                 <a href="./nutrition.html" class="service-card">
                   <svg class="service-card__icon" width="96" height="96">
                     <use href="./images/sprite.svg#icon-nutrition"></use>
@@ -244,16 +324,36 @@
                   <h3 class="service-card__title">Bathing</h3>
                 </article>
               </li>
+              <li class="services__item services__item--extra is-hidden">
+                <article class="service-card">
+                  <svg class="service-card__icon" width="96" height="96">
+                    <use href="./images/sprite.svg#icon-training"></use>
+                  </svg>
+                  <h3 class="service-card__title">Training</h3>
+                </article>
+              </li>
+              <li class="services__item services__item--extra is-hidden">
+                <article class="service-card">
+                  <svg class="service-card__icon" width="96" height="96">
+                    <use href="./images/sprite.svg#icon-bathing"></use>
+                  </svg>
+                  <h3 class="service-card__title">Bathing</h3>
+                </article>
+              </li>
             </ul>
           </div>
 
           <div class="services__actions">
-            <a href="#" class="services__link">
+            <button
+              type="button"
+              class="services__btn-more"
+              aria-expanded="false"
+            >
               more services
               <svg class="services__link-icon" width="24" height="12">
                 <use href="./images/sprite.svg#icon-arrow-long"></use>
               </svg>
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -667,7 +767,7 @@
           <ul class="socials footer__socials">
             <li class="socials__item">
               <a href="#" class="socials__link" aria-label="Instagram">
-                <svg class="socials__icon" width="30" height="30">
+                <svg class="socials__icon" width="32" height="32">
                   <use href="./images/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
@@ -676,8 +776,8 @@
               <a href="#" class="socials__link" aria-label="Facebook">
                 <svg
                   class="socials__icon socials__icon--facebook"
-                  width="30"
-                  height="30"
+                  width="32"
+                  height="32"
                 >
                   <use href="./images/sprite.svg#icon-facebook"></use>
                 </svg>
@@ -854,5 +954,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="./js/swiper-slider.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/services.js"></script>
   </body>
 </html>
