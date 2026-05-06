@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nutrition - Dog Club</title>
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+  </head>
+  <body class="page">
+    <header class="header">
+      <div class="container header__container">
+        <a
+          href="./index.html"
+          class="logo header__logo"
+          aria-label="Dog Club Logo"
+        >
+          <picture>
+            <source
+              srcset="./images/logo-desktop.svg"
+              media="(min-width: 1200px)"
+            />
+
+            <img
+              src="./images/logo-mobile.svg"
+              alt="Dog Club"
+              class="logo__icon"
+            />
+          </picture>
+        </a>
+
+        <nav class="nav header__nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#about" class="nav__link">Less talk</a>
+            </li>
+            <li class="nav__item">
+              <a href="#services" class="nav__link">Services category</a>
+            </li>
+            <li class="nav__item">
+              <a href="#customers" class="nav__link nav__link--active"
+                >Happy customer</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <button class="cart-btn" type="button" aria-label="Cart">
+            <svg class="cart-btn__icon">
+              <use href="./images/sprite.svg#icon-cart"></use>
+            </svg>
+          </button>
+
+          <button
+            class="burger-btn menu-btn-open"
+            type="button"
+            aria-label="Open menu"
+          >
+            <svg class="burger-btn__icon" width="24" height="24">
+              <use href="./images/sprite.svg#icon-header-menu"></use>
+            </svg>
+          </button>
+
+          <button
+            class="button button--primary modal-btn-open header__btn"
+            type="button"
+            data-modal-open
+          >
+            Contact us
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu">
+      <div class="container mobile-menu__container">
+        <div class="mobile-menu__header">
+          <a href="./index.html" class="logo" aria-label="Dog Club Logo">
+            <img
+              src="./images/logo-mobile.svg"
+              alt="Dog Club"
+              class="logo__icon"
+            />
+          </a>
+          <button
+            class="mobile-menu__btn-close menu-btn-close"
+            type="button"
+            aria-label="Close menu"
+          >
+            <svg class="mobile-menu__icon-close" width="24" height="24">
+              <use href="./images/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+
+        <nav class="nav mobile-menu__nav">
+          <ul class="nav__list nav__list--column">
+            <li class="nav__item">
+              <a href="#about" class="nav__link mobile-menu__link">Less talk</a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#services"
+                class="nav__link nav__link--active mobile-menu__link"
+                >Services category</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#customers" class="nav__link mobile-menu__link"
+                >Happy customer</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link mobile-menu__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button
+          class="button button--primary modal-btn-open mobile-menu__btn"
+          type="button"
+          data-modal-open
+        >
+          Contact us
+        </button>
+
+        <ul class="socials mobile-menu__socials">
+          <li class="socials__item">
+            <a href="#" class="socials__link" aria-label="Instagram">
+              <svg class="socials__icon" width="32" height="32">
+                <use href="./images/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a href="#" class="socials__link" aria-label="Facebook">
+              <svg
+                class="socials__icon socials__icon--facebook"
+                width="32"
+                height="32"
+              >
+                <use href="./images/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <main class="main">
+      <section class="catalog section">
+        <div class="container catalog__container">
+          <div class="catalog__top-bar">
+            <h1 class="catalog__title">Nutrition</h1>
+
+            <div class="sort catalog__sort">
+              <span class="sort__label">Sorting :</span>
+              <ul class="sort__list">
+                <li class="sort__item">
+                  <button class="sort__btn sort__btn--active" type="button">
+                    Popularity
+                  </button>
+                </li>
+                <li class="sort__item">
+                  <button class="sort__btn" type="button">Cheaper first</button>
+                </li>
+                <li class="sort__item">
+                  <button class="sort__btn" type="button">
+                    More expensive first
+                  </button>
+                </li>
+                <li class="sort__item">
+                  <button class="sort__btn" type="button">By name</button>
+                </li>
+                <li class="sort__item">
+                  <button class="sort__btn" type="button">
+                    New ones first
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <article class="fodder-card">
+                <div class="fodder-card__img-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/nutrition/fodder-img-1.webp    1x,
+                        ./images/nutrition/fodder-img-1@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/nutrition/fodder-img-1.jpg"
+                      srcset="./images/nutrition/fodder-img-1@2x.jpg 2x"
+                      alt="Dog food"
+                      class="fodder-card__img"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="fodder-card__meta">
+                  <span class="fodder-card__code">Vendor code: 37875</span>
+
+                  <div
+                    class="fodder-card__rating"
+                    aria-label="Rating 4 out of 5"
+                  >
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--empty" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="fodder-card__title">
+                  Dry food for dogs of average breeds Savory 3 kg (turkey and
+                  lamb)
+                </h3>
+                <div class="fodder-card__price-wrapper">
+                  <span class="fodder-card__price-current">136.00$</span>
+                  <s class="fodder-card__price-old">320.43$</s>
+                </div>
+
+                <button
+                  class="button button--primary fodder-card__btn"
+                  type="button"
+                >
+                  Buy
+                </button>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="fodder-card">
+                <div class="fodder-card__img-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/nutrition/fodder-img-1.webp    1x,
+                        ./images/nutrition/fodder-img-1@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/nutrition/fodder-img-1.jpg"
+                      srcset="./images/nutrition/fodder-img-1@2x.jpg 2x"
+                      alt="Dog food"
+                      class="fodder-card__img"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="fodder-card__meta">
+                  <span class="fodder-card__code">Vendor code: 37875</span>
+
+                  <div
+                    class="fodder-card__rating"
+                    aria-label="Rating 4 out of 5"
+                  >
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="fodder-card__title">
+                  Dry food for dogs of average breeds Savory 3 kg (turkey and
+                  lamb)
+                </h3>
+                <div class="fodder-card__price-wrapper">
+                  <span class="fodder-card__price-current">136.00$</span>
+                  <s class="fodder-card__price-old">320.43$</s>
+                </div>
+
+                <button
+                  class="button button--primary fodder-card__btn"
+                  type="button"
+                >
+                  Buy
+                </button>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="fodder-card">
+                <div class="fodder-card__img-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/nutrition/fodder-img-1.webp    1x,
+                        ./images/nutrition/fodder-img-1@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/nutrition/fodder-img-1.jpg"
+                      srcset="./images/nutrition/fodder-img-1@2x.jpg 2x"
+                      alt="Dog food"
+                      class="fodder-card__img"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="fodder-card__meta">
+                  <span class="fodder-card__code">Vendor code: 37875</span>
+
+                  <div
+                    class="fodder-card__rating"
+                    aria-label="Rating 4 out of 5"
+                  >
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="fodder-card__title">
+                  Dry food for dogs of average breeds Savory 3 kg (turkey and
+                  lamb)
+                </h3>
+                <div class="fodder-card__price-wrapper">
+                  <span class="fodder-card__price-current">136.00$</span>
+                  <s class="fodder-card__price-old">320.43$</s>
+                </div>
+
+                <button
+                  class="button button--primary fodder-card__btn"
+                  type="button"
+                >
+                  Buy
+                </button>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="fodder-card">
+                <div class="fodder-card__img-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/nutrition/fodder-img-1.webp    1x,
+                        ./images/nutrition/fodder-img-1@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/nutrition/fodder-img-1.jpg"
+                      srcset="./images/nutrition/fodder-img-1@2x.jpg 2x"
+                      alt="Dog food"
+                      class="fodder-card__img"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="fodder-card__meta">
+                  <span class="fodder-card__code">Vendor code: 37875</span>
+
+                  <div
+                    class="fodder-card__rating"
+                    aria-label="Rating 4 out of 5"
+                  >
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="fodder-card__title">
+                  Dry food for dogs of average breeds Savory 3 kg (turkey and
+                  lamb)
+                </h3>
+                <div class="fodder-card__price-wrapper">
+                  <span class="fodder-card__price-current">136.00$</span>
+                  <s class="fodder-card__price-old">320.43$</s>
+                </div>
+
+                <button
+                  class="button button--primary fodder-card__btn"
+                  type="button"
+                >
+                  Buy
+                </button>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="fodder-card">
+                <div class="fodder-card__img-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/nutrition/fodder-img-1.webp    1x,
+                        ./images/nutrition/fodder-img-1@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/nutrition/fodder-img-1.jpg"
+                      srcset="./images/nutrition/fodder-img-1@2x.jpg 2x"
+                      alt="Dog food"
+                      class="fodder-card__img"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="fodder-card__meta">
+                  <span class="fodder-card__code">Vendor code: 37875</span>
+
+                  <div
+                    class="fodder-card__rating"
+                    aria-label="Rating 4 out of 5"
+                  >
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="fodder-card__title">
+                  Dry food for dogs of average breeds Savory 3 kg (turkey and
+                  lamb)
+                </h3>
+                <div class="fodder-card__price-wrapper">
+                  <span class="fodder-card__price-current">136.00$</span>
+                  <s class="fodder-card__price-old">320.43$</s>
+                </div>
+
+                <button
+                  class="button button--primary fodder-card__btn"
+                  type="button"
+                >
+                  Buy
+                </button>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="fodder-card">
+                <div class="fodder-card__img-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/nutrition/fodder-img-1.webp    1x,
+                        ./images/nutrition/fodder-img-1@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/nutrition/fodder-img-1.jpg"
+                      srcset="./images/nutrition/fodder-img-1@2x.jpg 2x"
+                      alt="Dog food"
+                      class="fodder-card__img"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="fodder-card__meta">
+                  <span class="fodder-card__code">Vendor code: 37875</span>
+
+                  <div
+                    class="fodder-card__rating"
+                    aria-label="Rating 4 out of 5"
+                  >
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="fodder-card__title">
+                  Dry food for dogs of average breeds Savory 3 kg (turkey and
+                  lamb)
+                </h3>
+                <div class="fodder-card__price-wrapper">
+                  <span class="fodder-card__price-current">136.00$</span>
+                  <s class="fodder-card__price-old">320.43$</s>
+                </div>
+
+                <button
+                  class="button button--primary fodder-card__btn"
+                  type="button"
+                >
+                  Buy
+                </button>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="fodder-card">
+                <div class="fodder-card__img-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/nutrition/fodder-img-1.webp    1x,
+                        ./images/nutrition/fodder-img-1@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/nutrition/fodder-img-1.jpg"
+                      srcset="./images/nutrition/fodder-img-1@2x.jpg 2x"
+                      alt="Dog food"
+                      class="fodder-card__img"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="fodder-card__meta">
+                  <span class="fodder-card__code">Vendor code: 37875</span>
+
+                  <div
+                    class="fodder-card__rating"
+                    aria-label="Rating 4 out of 5"
+                  >
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--empty" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="fodder-card__title">
+                  Dry food for dogs of average breeds Savory 3 kg (turkey and
+                  lamb)
+                </h3>
+                <div class="fodder-card__price-wrapper">
+                  <span class="fodder-card__price-current">136.00$</span>
+                  <s class="fodder-card__price-old">320.43$</s>
+                </div>
+
+                <button
+                  class="button button--primary fodder-card__btn"
+                  type="button"
+                >
+                  Buy
+                </button>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="fodder-card">
+                <div class="fodder-card__img-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/nutrition/fodder-img-1.webp    1x,
+                        ./images/nutrition/fodder-img-1@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/nutrition/fodder-img-1.jpg"
+                      srcset="./images/nutrition/fodder-img-1@2x.jpg 2x"
+                      alt="Dog food"
+                      class="fodder-card__img"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="fodder-card__meta">
+                  <span class="fodder-card__code">Vendor code: 37875</span>
+
+                  <div
+                    class="fodder-card__rating"
+                    aria-label="Rating 4 out of 5"
+                  >
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="fodder-card__title">
+                  Dry food for dogs of average breeds Savory 3 kg (turkey and
+                  lamb)
+                </h3>
+                <div class="fodder-card__price-wrapper">
+                  <span class="fodder-card__price-current">136.00$</span>
+                  <s class="fodder-card__price-old">320.43$</s>
+                </div>
+
+                <button
+                  class="button button--primary fodder-card__btn"
+                  type="button"
+                >
+                  Buy
+                </button>
+              </article>
+            </li>
+          </ul>
+          <nav class="pagination catalog__pagination" aria-label="Pagination">
+            <ul class="pagination__list">
+              <li class="pagination__item">
+                <a
+                  href="#"
+                  class="pagination__link pagination__link--arrow"
+                  aria-label="Previous page"
+                >
+                  <svg width="14" height="14">
+                    <use
+                      href="./images/sprite.svg#icon-arrow-pagination-nutrition"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="pagination__item">
+                <a href="#" class="pagination__link pagination__link--active"
+                  >1</a
+                >
+              </li>
+              <li class="pagination__item">
+                <a href="#" class="pagination__link">2</a>
+              </li>
+              <li class="pagination__item">
+                <a href="#" class="pagination__link">3</a>
+              </li>
+              <li class="pagination__item">
+                <a href="#" class="pagination__link">4</a>
+              </li>
+              <li class="pagination__item">
+                <a href="#" class="pagination__link">5</a>
+              </li>
+              <li class="pagination__item">
+                <a href="#" class="pagination__link">6</a>
+              </li>
+              <li class="pagination__item">
+                <a href="#" class="pagination__link">7</a>
+              </li>
+              <li class="pagination__item">
+                <a href="#" class="pagination__link">8</a>
+              </li>
+              <li class="pagination__item">
+                <span class="pagination__dots">...</span>
+              </li>
+              <li class="pagination__item">
+                <a
+                  href="#"
+                  class="pagination__link pagination__link--arrow"
+                  aria-label="Next page"
+                >
+                  <svg width="14" height="14" style="transform: rotate(180deg)">
+                    <use
+                      href="./images/sprite.svg#icon-arrow-pagination-nutrition"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__brand">
+          <a href="./index.html" class="logo footer__logo">
+            <picture>
+              <source
+                media="(min-width: 1200px)"
+                srcset="./images/logo-desktop.svg"
+              />
+              <img
+                src="./images/logo-mobile.svg"
+                alt="Dog Club"
+                class="logo__icon"
+              />
+            </picture>
+          </a>
+          <ul class="socials footer__socials">
+            <li class="socials__item">
+              <a href="#" class="socials__link" aria-label="Instagram">
+                <svg class="socials__icon" width="32" height="32">
+                  <use href="./images/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link" aria-label="Facebook">
+                <svg
+                  class="socials__icon socials__icon--facebook"
+                  width="32"
+                  height="32"
+                >
+                  <use href="./images/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <nav class="nav footer__nav">
+          <ul class="nav__list nav__list--column">
+            <li class="nav__item">
+              <a href="#about" class="nav__link">Less talk</a>
+            </li>
+            <li class="nav__item">
+              <a href="#services" class="nav__link nav__link--active"
+                >Services category</a
+              >
+            </li>
+            <li class="nav__item">
+              <a href="#customers" class="nav__link">Happy customer</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="footer__subscribe">
+          <form class="subscribe-form form" name="subscribe-form">
+            <label class="form__label">
+              <input
+                type="email"
+                name="email"
+                class="form__input form__input--sm"
+                placeholder="Your email"
+                required
+              />
+              <svg class="form__icon">
+                <use href="./images/sprite.svg#icon-email"></use>
+              </svg>
+            </label>
+            <label class="form__label">
+              <input
+                type="text"
+                name="cmc"
+                class="form__input form__input--sm"
+                placeholder="Your cmc"
+                required
+              />
+            </label>
+
+            <button type="submit" class="button button--primary form__submit">
+              Contact us
+            </button>
+
+            <label class="form__policy">
+              <input
+                type="checkbox"
+                name="policy"
+                class="form__checkbox-input visually-hidden"
+                required
+              />
+              <span class="form__checkbox-custom"></span>
+              <span class="form__policy-text"
+                >I agree to the privacy policy</span
+              >
+            </label>
+          </form>
+        </div>
+
+        <picture class="footer__dog">
+          <source
+            srcset="./images/footer-dog.webp 1x, ./images/footer-dog@2x.webp 2x"
+            type="image/webp"
+          />
+          <img
+            src="./images/footer-dog.png"
+            srcset="./images/footer-dog@2x.png 2x"
+            alt="Dog peeking out"
+          />
+        </picture>
+      </div>
+    </footer>
+
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <button
+          class="modal__btn-close modal-btn-close"
+          type="button"
+          aria-label="Close modal"
+        >
+          <svg class="modal__icon-close" width="24" height="24">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <h2 class="modal__title">Our experts will take care of your friend</h2>
+        <p class="modal__subtitle">Fill out the form so we can contact you!</p>
+
+        <form class="form" name="modal-consultation-form">
+          <label class="form__label">
+            <input
+              type="text"
+              name="user_name"
+              class="form__input"
+              placeholder="Your name"
+              pattern="^\s*[a-zA-Zа-яА-ЯіІїЇєЄґҐ]+\s+[a-zA-Zа-яА-ЯіІїЇєЄґҐ]+\s*$"
+              title="Введіть ім'я та прізвище (два слова)"
+              required
+            />
+            <svg class="form__icon" width="32" height="32">
+              <use href="./images/sprite.svg#icon-user"></use>
+            </svg>
+          </label>
+
+          <label class="form__label">
+            <input
+              type="text"
+              name="pet_name"
+              class="form__input"
+              placeholder="Pet name"
+              required
+            />
+            <svg class="form__icon" width="32" height="32">
+              <use href="./images/sprite.svg#icon-paw"></use>
+            </svg>
+          </label>
+
+          <label class="form__label">
+            <input
+              type="tel"
+              name="phone"
+              class="form__input"
+              placeholder="Your phone"
+              pattern="^\+380\d{9}$"
+              title="Формат: +380XXXXXXXXX"
+              required
+            />
+            <svg class="form__icon" width="32" height="32">
+              <use href="./images/sprite.svg#icon-phone"></use>
+            </svg>
+          </label>
+
+          <label class="form__label">
+            <input
+              type="email"
+              name="email"
+              class="form__input"
+              placeholder="Your email"
+              required
+            />
+            <svg class="form__icon" width="32" height="32">
+              <use href="./images/sprite.svg#icon-email"></use>
+            </svg>
+          </label>
+
+          <button type="submit" class="button button--primary form__submit">
+            Contact us
+          </button>
+
+          <label class="form__policy">
+            <input
+              type="checkbox"
+              name="policy"
+              class="form__checkbox-input visually-hidden"
+              required
+            />
+            <span class="form__checkbox-custom"></span>
+            <span class="form__policy-text">I agree to the privacy policy</span>
+          </label>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./js/swiper-slider.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/services.js"></script>
+  </body>
+</html>
