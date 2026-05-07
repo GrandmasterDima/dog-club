@@ -3,6 +3,33 @@
   align-items: center;
   gap: 16px;
 
+  &__mobile-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    color: var(--color-primary-dark);
+    cursor: pointer;
+
+    svg {
+      fill: var(--color-brand-normal);
+    }
+    @media screen and (min-width: $bp-desktop) {
+      display: none;
+    }
+  }
+  &__desktop-wrapper {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+  }
   &__label {
     font-weight: 600;
     line-height: 1.3;

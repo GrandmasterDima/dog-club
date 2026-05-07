@@ -35,18 +35,22 @@
         <nav class="nav header__nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#about" class="nav__link">Less talk</a>
+              <a href="./index.html#about" class="nav__link">Less talk</a>
             </li>
             <li class="nav__item">
-              <a href="#services" class="nav__link">Services category</a>
+              <a href="./index.html#services" class="nav__link"
+                >Services category</a
+              >
             </li>
             <li class="nav__item">
-              <a href="#customers" class="nav__link nav__link--active"
+              <a
+                href="./index.html#customers"
+                class="nav__link nav__link--active"
                 >Happy customer</a
               >
             </li>
             <li class="nav__item">
-              <a href="#contact" class="nav__link">Contact</a>
+              <a href="./index.html#contact" class="nav__link">Contact</a>
             </li>
           </ul>
         </nav>
@@ -103,22 +107,28 @@
         <nav class="nav mobile-menu__nav">
           <ul class="nav__list nav__list--column">
             <li class="nav__item">
-              <a href="#about" class="nav__link mobile-menu__link">Less talk</a>
+              <a href="./index.html#about" class="nav__link mobile-menu__link"
+                >Less talk</a
+              >
             </li>
             <li class="nav__item">
               <a
-                href="#services"
+                href="./index.html#services"
                 class="nav__link nav__link--active mobile-menu__link"
                 >Services category</a
               >
             </li>
             <li class="nav__item">
-              <a href="#customers" class="nav__link mobile-menu__link"
+              <a
+                href="./index.html#customers"
+                class="nav__link mobile-menu__link"
                 >Happy customer</a
               >
             </li>
             <li class="nav__item">
-              <a href="#contact" class="nav__link mobile-menu__link">Contact</a>
+              <a href="./index.html#contact" class="nav__link mobile-menu__link"
+                >Contact</a
+              >
             </li>
           </ul>
         </nav>
@@ -161,30 +171,40 @@
             <h1 class="catalog__title">Nutrition</h1>
 
             <div class="sort catalog__sort">
-              <span class="sort__label">Sorting :</span>
-              <ul class="sort__list">
-                <li class="sort__item">
-                  <button class="sort__btn sort__btn--active" type="button">
-                    Popularity
-                  </button>
-                </li>
-                <li class="sort__item">
-                  <button class="sort__btn" type="button">Cheaper first</button>
-                </li>
-                <li class="sort__item">
-                  <button class="sort__btn" type="button">
-                    More expensive first
-                  </button>
-                </li>
-                <li class="sort__item">
-                  <button class="sort__btn" type="button">By name</button>
-                </li>
-                <li class="sort__item">
-                  <button class="sort__btn" type="button">
-                    New ones first
-                  </button>
-                </li>
-              </ul>
+              <button class="sort__mobile-btn" type="button">
+                <svg width="16" height="16">
+                  <use href="./images/sprite.svg#icon-sort"></use>
+                </svg>
+                Popularity
+              </button>
+              <div class="sort__desktop-wrapper">
+                <span class="sort__label">Sorting :</span>
+                <ul class="sort__list">
+                  <li class="sort__item">
+                    <button class="sort__btn sort__btn--active" type="button">
+                      Popularity
+                    </button>
+                  </li>
+                  <li class="sort__item">
+                    <button class="sort__btn" type="button">
+                      Cheaper first
+                    </button>
+                  </li>
+                  <li class="sort__item">
+                    <button class="sort__btn" type="button">
+                      More expensive first
+                    </button>
+                  </li>
+                  <li class="sort__item">
+                    <button class="sort__btn" type="button">By name</button>
+                  </li>
+                  <li class="sort__item">
+                    <button class="sort__btn" type="button">
+                      New ones first
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <ul class="catalog__list">
@@ -255,14 +275,75 @@
                   <picture>
                     <source
                       srcset="
-                        ./images/nutrition/fodder-img-1.webp    1x,
-                        ./images/nutrition/fodder-img-1@2x.webp 2x
+                        ./images/nutrition/fodder-img-2.webp    1x,
+                        ./images/nutrition/fodder-img-2@2x.webp 2x
                       "
                       type="image/webp"
                     />
                     <img
-                      src="./images/nutrition/fodder-img-1.jpg"
-                      srcset="./images/nutrition/fodder-img-1@2x.jpg 2x"
+                      src="./images/nutrition/fodder-img-2.jpg"
+                      srcset="./images/nutrition/fodder-img-2@2x.jpg 2x"
+                      alt="Dog food"
+                      class="fodder-card__img"
+                      loading="lazy"
+                    />
+                  </picture>
+                </div>
+                <div class="fodder-card__meta">
+                  <span class="fodder-card__code">Vendor code: 37875</span>
+
+                  <div
+                    class="fodder-card__rating"
+                    aria-label="Rating 4 out of 5"
+                  >
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                    <svg class="star star--filled" width="16" height="16">
+                      <use href="./images/sprite.svg#icon-star"></use>
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="fodder-card__title">
+                  Dry food for dogs of average breeds Savory 3 kg (turkey and
+                  lamb)
+                </h3>
+                <div class="fodder-card__price-wrapper">
+                  <span class="fodder-card__price-current">136.00$</span>
+                  <s class="fodder-card__price-old">320.43$</s>
+                </div>
+
+                <button
+                  class="button button--primary fodder-card__btn"
+                  type="button"
+                >
+                  Buy
+                </button>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="fodder-card">
+                <div class="fodder-card__img-wrapper">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/nutrition/fodder-img-3.webp    1x,
+                        ./images/nutrition/fodder-img-3@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <img
+                      src="./images/nutrition/fodder-img-3.jpg"
+                      srcset="./images/nutrition/fodder-img-3@2x.jpg 2x"
                       alt="Dog food"
                       class="fodder-card__img"
                       loading="lazy"
@@ -377,14 +458,14 @@
                   <picture>
                     <source
                       srcset="
-                        ./images/nutrition/fodder-img-1.webp    1x,
-                        ./images/nutrition/fodder-img-1@2x.webp 2x
+                        ./images/nutrition/fodder-img-2.webp    1x,
+                        ./images/nutrition/fodder-img-2@2x.webp 2x
                       "
                       type="image/webp"
                     />
                     <img
-                      src="./images/nutrition/fodder-img-1.jpg"
-                      srcset="./images/nutrition/fodder-img-1@2x.jpg 2x"
+                      src="./images/nutrition/fodder-img-2.jpg"
+                      srcset="./images/nutrition/fodder-img-2@2x.jpg 2x"
                       alt="Dog food"
                       class="fodder-card__img"
                       loading="lazy"
@@ -438,75 +519,14 @@
                   <picture>
                     <source
                       srcset="
-                        ./images/nutrition/fodder-img-1.webp    1x,
-                        ./images/nutrition/fodder-img-1@2x.webp 2x
+                        ./images/nutrition/fodder-img-3.webp    1x,
+                        ./images/nutrition/fodder-img-3@2x.webp 2x
                       "
                       type="image/webp"
                     />
                     <img
-                      src="./images/nutrition/fodder-img-1.jpg"
-                      srcset="./images/nutrition/fodder-img-1@2x.jpg 2x"
-                      alt="Dog food"
-                      class="fodder-card__img"
-                      loading="lazy"
-                    />
-                  </picture>
-                </div>
-                <div class="fodder-card__meta">
-                  <span class="fodder-card__code">Vendor code: 37875</span>
-
-                  <div
-                    class="fodder-card__rating"
-                    aria-label="Rating 4 out of 5"
-                  >
-                    <svg class="star star--filled" width="16" height="16">
-                      <use href="./images/sprite.svg#icon-star"></use>
-                    </svg>
-                    <svg class="star star--filled" width="16" height="16">
-                      <use href="./images/sprite.svg#icon-star"></use>
-                    </svg>
-                    <svg class="star star--filled" width="16" height="16">
-                      <use href="./images/sprite.svg#icon-star"></use>
-                    </svg>
-                    <svg class="star star--filled" width="16" height="16">
-                      <use href="./images/sprite.svg#icon-star"></use>
-                    </svg>
-                    <svg class="star star--filled" width="16" height="16">
-                      <use href="./images/sprite.svg#icon-star"></use>
-                    </svg>
-                  </div>
-                </div>
-                <h3 class="fodder-card__title">
-                  Dry food for dogs of average breeds Savory 3 kg (turkey and
-                  lamb)
-                </h3>
-                <div class="fodder-card__price-wrapper">
-                  <span class="fodder-card__price-current">136.00$</span>
-                  <s class="fodder-card__price-old">320.43$</s>
-                </div>
-
-                <button
-                  class="button button--primary fodder-card__btn"
-                  type="button"
-                >
-                  Buy
-                </button>
-              </article>
-            </li>
-            <li class="catalog__item">
-              <article class="fodder-card">
-                <div class="fodder-card__img-wrapper">
-                  <picture>
-                    <source
-                      srcset="
-                        ./images/nutrition/fodder-img-1.webp    1x,
-                        ./images/nutrition/fodder-img-1@2x.webp 2x
-                      "
-                      type="image/webp"
-                    />
-                    <img
-                      src="./images/nutrition/fodder-img-1.jpg"
-                      srcset="./images/nutrition/fodder-img-1@2x.jpg 2x"
+                      src="./images/nutrition/fodder-img-3.jpg"
+                      srcset="./images/nutrition/fodder-img-3@2x.jpg 2x"
                       alt="Dog food"
                       class="fodder-card__img"
                       loading="lazy"
@@ -627,8 +647,8 @@
                       type="image/webp"
                     />
                     <img
-                      src="./images/nutrition/fodder-img-1.jpg"
-                      srcset="./images/nutrition/fodder-img-1@2x.jpg 2x"
+                      src="./images/nutrition/fodder-img-2.jpg"
+                      srcset="./images/nutrition/fodder-img-2@2x.jpg 2x"
                       alt="Dog food"
                       class="fodder-card__img"
                       loading="lazy"
@@ -781,18 +801,22 @@
         <nav class="nav footer__nav">
           <ul class="nav__list nav__list--column">
             <li class="nav__item">
-              <a href="#about" class="nav__link">Less talk</a>
+              <a href="./index.html#about" class="nav__link">Less talk</a>
             </li>
             <li class="nav__item">
-              <a href="#services" class="nav__link nav__link--active"
+              <a
+                href="./index.html#services"
+                class="nav__link nav__link--active"
                 >Services category</a
               >
             </li>
             <li class="nav__item">
-              <a href="#customers" class="nav__link">Happy customer</a>
+              <a href="./index.html#customers" class="nav__link"
+                >Happy customer</a
+              >
             </li>
             <li class="nav__item">
-              <a href="#contact" class="nav__link">Contact</a>
+              <a href="./index.html#contact" class="nav__link">Contact</a>
             </li>
           </ul>
         </nav>

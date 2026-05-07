@@ -8,6 +8,7 @@
   z-index: 5;
   padding: 16px;
   transition: opacity 0.2s ease, visibility 0.2s ease;
+  visibility: visible;
 
   &.is-hidden {
     opacity: 0;
